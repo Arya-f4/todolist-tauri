@@ -31,10 +31,10 @@ const Aside = ({ showAside, setShowAside }) => {
     showAside && (
       <aside id="default-sidebar" className={`transform translate-x-0 transition-transform duration-200 ease-in-out ${showAside ? 'slide-in' : 'slide-out'}`} >
 
-        <div className="flex w-[270px] h-full gap-[60px] p-[20px] bg-white flex-col items-start relative">
+        <div className="flex w-[270px] h-screen gap-[60px] p-[20px] bg-white flex-col items-start relative">
 
-          <div className="inline-flex items-center gap-[60px] relative flex-[0_0_auto] mr-[-11.00px]">
-            <img className="relative flex-[0_0_auto]" alt="Logo" src={logo} />
+          <div className="inline-flex items-center gap-[60px] relative mr-[-11.00px]">
+            <img className="relative " alt="Logo" src={logo} />
             <button
               class="cursor-pointer duration-200 hover:scale-125 active:scale-100 bg-white"
               title="Go Back"
@@ -58,13 +58,13 @@ const Aside = ({ showAside, setShowAside }) => {
           </div>
 
           <ul>
-            <div className="inline-flex flex-col items-start gap-[20px] relative flex-[0_0_auto] mr-[-20.00px]">
+            <div className="inline-flex flex-col items-start gap-[20px] relative mr-[-20.00px]">
               <li>
                 <div className="relative w-fit mt-[-1.00px] [font-family:'Nunito-SemiBold',Helvetica] font-semibold text-[#0038ff] text-[24px] tracking-[0.72px] leading-[normal]">
                   Main
                 </div>
               </li>
-              <div className="flex flex-col w-[212px] items-start gap-[30px] relative flex-[0_0_auto]">
+              <div className="flex flex-col w-[212px] items-start gap-[30px] relative ">
                 <li>
                   <a
                     className="flex items-center p-2 text-gray-200 rounded-lg dark:text-white hover:bg-gray-100  group"
@@ -105,7 +105,7 @@ const Aside = ({ showAside, setShowAside }) => {
                     href="#"
                     className="flex items-center p-2 text-gray-200 rounded-lg dark:text-white hover:bg-gray-100  group"
                   >
-                    <div className="inline-flex items-center gap-[10px] relative flex-[0_0_auto]">
+                    <div className="inline-flex items-center gap-[10px] relative ">
                       <img
                         className="relative w-[18px] h-[18px]"
                         alt="Zap"
@@ -118,7 +118,7 @@ const Aside = ({ showAside, setShowAside }) => {
                   </a>
                 </li>
                 <li>
-                  <div className="inline-flex items-center gap-[10px] relative flex-[0_0_auto]">
+                  <div className="inline-flex items-center gap-[10px] relative ">
                     <img
                       className="relative w-[18px] h-[18px]"
                       alt="Plus square"
@@ -132,12 +132,12 @@ const Aside = ({ showAside, setShowAside }) => {
               </div>
             </div>
           </ul>
-          <div className="inline-flex flex-col items-start gap-[20px] relative flex-[0_0_auto]">
+          <div className="inline-flex flex-col items-start gap-[20px] relative ">
             <div className="relative self-stretch mt-[-1.00px] [font-family:'Nunito-SemiBold',Helvetica] font-semibold text-[#0038ff] text-[24px] tracking-[0.72px] leading-[normal]">
               Data
             </div>
-            <div className="inline-flex gap-[30px] flex-[0_0_auto] flex-col items-start relative">
-              <div className="inline-flex items-center gap-[10px] relative flex-[0_0_auto]">
+            <div className="inline-flex gap-[30px]  flex-col items-start relative">
+              <div className="inline-flex items-center gap-[10px] relative ">
                 <img
                   className="relative w-[18px] h-[18px]"
                   alt="Bar chart"
@@ -147,7 +147,7 @@ const Aside = ({ showAside, setShowAside }) => {
                   Statistics
                 </div>
               </div>
-              <div className="inline-flex items-center gap-[10px] relative flex-[0_0_auto]">
+              <div className="inline-flex items-center gap-[10px] relative ">
                 <img
                   className="relative w-[18px] h-[18px]"
                   alt="Trending up"
