@@ -22,6 +22,27 @@
   }
 }
 
+@keyframes slideBot {
+  from {
+    transform: translateY(-100%);
+
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideTop {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
+}
+
 @keyframes slideOut {
   from {
     transform: translateX(0);

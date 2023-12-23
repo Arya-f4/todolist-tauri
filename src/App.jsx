@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/tauri";
 import "./App.css";
@@ -8,6 +8,8 @@ import { BrowserRouter } from "react-router-dom";
 const App = () => {
   const [showAside, setShowAside] = useState(false);
   const [showWork, setShowWork] = useState(false);
+  const [showHome, setShowHome] = useState(true);
+
   return (
     <BrowserRouter>
 
@@ -15,7 +17,7 @@ const App = () => {
         {!showAside && (
           <button
             className="left-10 top-5 cursor-pointer duration-200 hover:scale-125 active:scale-100 bg-white absolute"
-            title="Go Back"
+            title="Show aside"
             onClick={() => {
               setShowAside(!showAside);
 
@@ -40,9 +42,13 @@ const App = () => {
             </svg>
           </button>
         )}
-        <Aside showAside={showAside} setShowAside={setShowAside} />
-        <Home showAside={showAside} setShowAside={setShowAside} />
+        <div className="sm:absolute md:relative">
+          <Aside showAside={showAside} setShowAside={setShowAside} />
+        </div>
+        <div className="sm:relative md:absolute">
+          {showHome && <Home showAside={showAside} setShowAside={setShowAside} />}
 
+        </div>
       </div>
 
     </BrowserRouter>

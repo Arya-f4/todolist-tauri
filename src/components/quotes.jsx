@@ -7,7 +7,7 @@ const QuotesFetch = () => {
     fetch('https://api.api-ninjas.com/v1/quotes?category=dreams', {
       method: "GET",
       headers: {
-        'X-Api-Key': 'FhqUdMs5oFLdWpT4JyeJ+A==8jpoyAlwqXxebtI2rrrrr'
+        'X-Api-Key': 'FhqUdMs5oFLdWpT4JyeJ+A==8jpoyAlwqXxebtI2'
       },
     })
       .then(response => {
